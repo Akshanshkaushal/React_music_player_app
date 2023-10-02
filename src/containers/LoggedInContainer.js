@@ -4,6 +4,7 @@ import songContext from "../contexts/songContext";
 import Navbar from "../components/Navbar";
 import SearchBar from "../components/SearchBar";
 import Sidebar from "../components/Sidebar";
+import "./loggincontainer.css"
 
 const LoggedInContainer = ({ info, children }) => {
   const [currentTime, setCurrentTime] = useState(0);
@@ -186,7 +187,7 @@ const LoggedInContainer = ({ info, children }) => {
   };
 
   return (
-    <div className="h-full w-full bg-zinc-900  ">
+    <div className="h-full w-full bg-zinc-900 ">
       <Navbar onLogoClick={handleLogoClick} /> {/* Pass onLogoClick prop */}
       {/* Add the SearchBar component */}
       <div className="py-6 flex justify-center ">
@@ -209,8 +210,8 @@ const LoggedInContainer = ({ info, children }) => {
             <div
               className={` md:p-4 pt-0  overflow-auto ${
                 isExpanded
-                  ? "max-h-50 min-h-50   lg:max-h-50 lg:min-h-50 md:max-h-35 md:min-h-35"
-                  : "max-h-50 min-h-50 lg:max-h-50 lg:min-h-50 md:max-h-35 md:min-h-35"
+                  ? "searchbarenabled"
+                  : "searchbardisabled"
               } `}
             >
               {children}

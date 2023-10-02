@@ -1,0 +1,23 @@
+@media(max-width: 1800px){
+.searchbarenabled{
+    max-height: 32rem;
+    min-height: 32rem;
+}
+
+.searchbardisabled{
+    max-height: 35rem;
+    min-height: 35rem;
+}
+}
+
+@media(min-width: 1800px){
+    .searchbarenabled{
+        max-height: 48rem;
+        min-height: 48rem;
+    }
+    
+    .searchbardisabled{
+        max-height: 50rem;
+        min-height: 50rem;
+    }
+    }
