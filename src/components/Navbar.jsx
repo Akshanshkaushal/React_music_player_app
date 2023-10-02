@@ -82,7 +82,7 @@ export default function Navbar({onLogoClick}) {
            
             <li>
               <a
-                href="https://akshanshkaushal.github.io/3D_PORTFOLIO/"
+                href= "https://akshanshkaushal.github.io/nportfolio/"
                 className={`block px-2 py-1 md:p-2 ${
                   isMenuOpen
                     ? " text-white   rounded-md"
