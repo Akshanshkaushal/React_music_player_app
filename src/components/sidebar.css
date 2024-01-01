@@ -1,0 +1,24 @@
+
+overflow-y-auto {
+    --sb-track-color: #232E33;
+    --sb-thumb-color: #c8ff1d;
+    --sb-size: 8px;
+  
+    scrollbar-color: var(--sb-thumb-color) 
+                     var(--sb-track-color);
+  }
+  
+  overflow-y-auto::-webkit-scrollbar {
+    width: var(--sb-size) 
+  }
+  
+  overflow-y-auto::-webkit-scrollbar-track {
+    background: var(--sb-track-color);
+    border-radius: 10px;
+  }
+  
+  overflow-y-auto::-webkit-scrollbar-thumb {
+    background: var(--sb-thumb-color);
+    border-radius: 10px;
+    border: 1px solid #18a2e0;
+    }

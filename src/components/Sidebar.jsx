@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import filteredInfoContext from '../contexts/FilteredinfoContext';
 import { useSidebarContext } from '../contexts/Sidebarcontext';
 import { Icon } from '@iconify/react';
+import "./sidebar.css";
 
 const Sidebar = ({info}) => {
   

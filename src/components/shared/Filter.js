@@ -152,6 +152,20 @@ const SingleFilterCard = ({ info}) => {
         return `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
       };
   
+      console.log(filteredinfo)
+
+      function extractArtistName(artistNameWithTags) {
+        // Create a temporary HTML element (e.g., a div)
+        const tempDiv = document.createElement('div');
+        tempDiv.innerHTML = artistNameWithTags;
+      
+        // Extract the text content from the created element
+        const artistNameWithoutTags = tempDiv.textContent || tempDiv.innerText;
+      
+        // Return the trimmed artist name
+        return artistNameWithoutTags.trim();
+      }
+      
 
     return (
         <div>
@@ -191,7 +205,7 @@ const SingleFilterCard = ({ info}) => {
                                 </div>
                               
                                 <div className="text-xs text-gray-400 cursor-pointer hover:underline">
-                                {item.artis_name}
+                                {extractArtistName(item.artis_name)}
                                 </div>
                             </div>
           

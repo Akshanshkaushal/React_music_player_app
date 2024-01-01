@@ -186,6 +186,18 @@ const LoggedInContainer = ({ info, children }) => {
     link.click();
   };
 
+  function extractArtistName(artistNameWithTags) {
+    // Create a temporary HTML element (e.g., a div)
+    const tempDiv = document.createElement('div');
+    tempDiv.innerHTML = artistNameWithTags;
+  
+    // Extract the text content from the created element
+    const artistNameWithoutTags = tempDiv.textContent || tempDiv.innerText;
+  
+    // Return the trimmed artist name
+    return artistNameWithoutTags.trim();
+  }
+
   return (
     <div className="h-full w-full bg-zinc-900 ">
       <Navbar onLogoClick={handleLogoClick} /> {/* Pass onLogoClick prop */}
@@ -263,7 +275,7 @@ const LoggedInContainer = ({ info, children }) => {
                 </div>
 
                 <div className="hidden md:block text-xs text-gray-500   cursor-pointer">
-                  {currentSong.artis_name}
+                {extractArtistName(currentSong.artis_name)}
                 </div>
               </div>
             </div>
